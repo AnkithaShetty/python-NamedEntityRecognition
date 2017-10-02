@@ -1,0 +1,57 @@
+played	on	Monday	(	home	team	in	CAPS	)	:
+VBD	IN	NNP	(	NN	NN	IN	NNP	)	:
+O	O	O	O	O	O	O	O	O	O
+American	League
+NNP	NNP
+B-MISC	I-MISC
+Cleveland	2	DETROIT	1
+NNP	CD	NNP	CD
+B-ORG	O	B-ORG	O
+BALTIMORE	12	Oakland	11	(	10	innings	)
+VB	CD	NNP	CD	(	CD	NN	)
+B-ORG	O	B-ORG	O	O	O	O	O
+TORONTO	5	Minnesota	3
+TO	CD	NNP	CD
+B-ORG	O	B-ORG	O
+Milwaukee	3	CHICAGO	2
+NNP	CD	NNP	CD
+B-ORG	O	B-ORG	O
+Boston	4	CALIFORNIA	1
+NNP	CD	NNP	CD
+B-ORG	O	B-ORG	O
+SEATTLE	2	New	York	1
+NNP	CD	NNP	NNP	CD
+B-ORG	O	B-ORG	I-ORG	O
+National	League
+NNP	NNP
+B-MISC	I-MISC
+SAN	FRANCISCO	1	Philadelphia	0
+NNP	NNP	CD	NNP	CD
+B-ORG	I-ORG	O	B-ORG	O
+St	Louis	3	HOUSTON	2
+NNP	NNP	CD	NNP	CD
+B-ORG	I-ORG	O	B-ORG	O
+COLORADO	9	Cincinnati	5
+NNP	CD	NNP	CD
+B-ORG	O	B-ORG	O
+TENNIS	-	CHANG	,	WASHINGTON	ADVANCE	,	TWO	WOMEN	'S	SEEDS	FALL	.
+NNS	:	NN	,	NNP	NNP	,	CD	VBP	VBZ	NNP	NN	.
+O	O	B-PER	O	B-LOC	O	O	O	O	O	O	O	O
+Larry	Fine
+NNP	NNP
+B-PER	I-PER
+NEW	YORK	1996-08-26
+NNP	NNP	CD
+B-LOC	I-LOC	O
+Michael	Chang	is	playing	in	his	10th	U.S.	Open	and	enjoying	his	highest	seeding	ever	,	but	the	24-year-old	American	had	to	overcome	a	case	of	the	jitters	Monday	before	winning	his	first-round	match	on	opening	day	.
+NNP	NNP	VBZ	VBG	IN	PRP$	JJ	NNP	NNP	CC	VBG	PRP$	JJS	VBG	RB	,	CC	DT	JJ	NNP	VBD	TO	VB	DT	NN	IN	DT	NNS	NNP	IN	VBG	PRP$	JJ	NN	IN	NN	NN	.
+B-PER	I-PER	O	O	O	O	O	B-MISC	I-MISC	O	O	O	O	O	O	O	O	O	O	B-MISC	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+Chang	,	seeded	second	behind	defending	champion	Pete	Sampras	,	took	two	hours	40	minutes	to	defeat	186th-ranked	Jaime	Oncins	of	Brazil	3-6	6-1	6-0	7-6	,	8-6	in	the	tiebreaker	.
+NNP	,	VBN	JJ	IN	VBG	NN	NNP	NNP	,	VBD	CD	NNS	CD	NNS	TO	VB	JJ	NNP	NNP	IN	NNP	CD	CD	CD	RB	,	RB	IN	DT	NN	.
+B-PER	O	O	O	O	O	O	B-PER	I-PER	O	O	O	O	O	O	O	O	O	B-PER	I-PER	O	B-LOC	O	O	O	O	O	O	O	O	O	O
+"	I	was	pretty	tight	the	whole	match	,	"	conceded	Chang	,	one	of	the	hottest	players	on	tour	this	summer	with	a	16-2	record	on	hardcourts	that	included	two	titles	and	a	runner-up	finish	.
+"	PRP	VBD	RB	JJ	DT	NN	NN	,	"	VBD	NNP	,	CD	IN	DT	JJS	NNS	IN	NN	DT	NN	IN	DT	CD	NN	IN	NNS	WDT	VBD	CD	NNS	CC	DT	NN	NN	.
+O	O	O	O	O	O	O	O	O	O	O	B-PER	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+"	Everyone	has	moments	when	they	get	tight	.
+"	NN	VBZ	NNS	WRB	PRP	VBP	RB	.
+O	O	O	O	O	O	O	O	O
