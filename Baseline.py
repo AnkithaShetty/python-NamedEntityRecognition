@@ -1,3 +1,4 @@
+from collections import defaultdict
 def file_reader(file_path, list_lines ):
     print("Reading files into list of lines")
     file_stream = open(file_path, 'r')
@@ -14,11 +15,17 @@ def word_dictionary_builder(list_lines):
         word_tuple = list(zip(list_lines[i], list_lines[i + 1], list_lines[i + 2]))
         for word, pos, ner in word_tuple:
             if word in word_dictionary.keys():
-                p, n, counter = word_dictionary[word]
-                counter += 1
-                word_dictionary[word] = (p, n, counter)
+                #counter for pos, ner tags
+                p, n, counter_pos, counter_ner = word_dictionary[word]
+                counter_pos[pos] += 1
+                counter_ner[ner] += 1
+                word_dictionary[word] = (p, n, counter_pos, counter_ner)
             else:
-                word_dictionary[word] = (pos, ner, 0)
+                counter_pos = defaultdict(lambda: 0)
+                counter_ner = defaultdict(lambda: 0)
+                counter_pos[pos] = 1
+                counter_ner[ner] = 1
+                word_dictionary[word] = (pos, ner, counter_pos, counter_ner)
     return word_dictionary
 
 
@@ -29,8 +36,10 @@ def word_builder_for_test(test_lines, word_dictionary):
         word_tuple_test = list(zip(test_lines[i], test_lines[i + 1], test_lines[i + 2]))
         for word, pos, loc in word_tuple_test:
             if word in word_dictionary.keys():
-                pos, ner, counter = word_dictionary[word]
-                test_ner.extend([(word,ner,loc)])
+                pos, ner, counter_pos, counter_ner = word_dictionary[word]
+                ner = max(counter_ner, key=counter_ner.get)
+                #print(word + ner)
+                test_ner.extend([(word, ner, loc)])
     return test_ner
 
 
@@ -47,13 +56,16 @@ def main():
     words_not_found = []
     ner_position_dict = {'ORG': [-1], 'MISC': [-1], 'PER': [-1], 'LOC': [-1]}
 
+
+    print(word_tuples_test)
+
     for word, ner, loc in word_tuples_test:
         ner = ner[2:]
         if ner in ner_position_dict.keys():
             if ner_position_dict[ner]:
                 ner_position_dict[ner].extend([loc])
         else:
-            words_not_found.append(word)
+            words_not_found.append((word,pos))
 
     for key, val in ner_position_dict.items():
         integer_list_values = [int(v) for v in val]
@@ -72,6 +84,7 @@ def main():
         for key, value in ner_position_dict.items():
             writer.writerow([key, value])
 
+    print(words_not_found)
 
 if __name__ == "__main__":
         main()
